@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille technologique - Vulnérabilités informatiques | Jérémy Bruguet</title>
+<meta name="description" content="Veille technologique de Jérémy Bruguet sur les vulnérabilités informatiques : failles zero-day, exploitation, correctifs et mesures de protection.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Veille technologique - Vulnérabilités informatiques">
+<meta property="og:description" content="Comprendre les vulnérabilités, leur exploitation et les moyens de s'en protéger.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html"><span class="logo" aria-hidden="true">JB</span>Jérémy Bruguet</a>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="i icon icon-menu" aria-hidden="true"></span> Menu</button>
+<nav id="menu" aria-label="Navigation principale"><ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html">Projets</a></li>
+<li><a href="veille.html" aria-current="page">Veille technologique</a></li>
+<li><a href="CV_jeremy_bruguet.pdf" target="_blank" rel="noopener">CV</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul></nav>
+</div></header>
+<main id="contenu">
+<section class="hero"><div class="wrap prose">
+<p class="eyebrow">Veille technologique</p>
+<h1>Vulnérabilités informatiques : de la découverte à la correction</h1>
+<p class="lead">Cette veille suit les failles de sécurité informatiques, en accordant une attention particulière aux vulnérabilités zero-day, à leur exploitation réelle et aux réponses apportées par les éditeurs.</p>
+<p>L'objectif n'est pas de recopier une liste de CVE : chaque mise à jour doit expliquer ce qui est vulnérable, ce qu'un attaquant pourrait faire, si l'exploitation est confirmée, quelles versions sont concernées et comment réduire le risque.</p>
+<ul class="tags"><li><a href="#etat-des-lieux">État des lieux</a></li><li><a href="#cycle">Cycle de vie d'une faille</a></li><li><a href="#analyses">Analyses de vulnérabilités</a></li><li><a href="#historique">Historique</a></li><li><a href="#sources">Sources</a></li></ul>
+</div></section>
+<section class="sec alt" id="etat-des-lieux"><div class="wrap">
+<h2>État des lieux initial</h2>
+<p class="meta">Point de départ - octobre 2026</p>
+<div class="stack">
+<article class="card"><h3>Qu'est-ce qu'une vulnérabilité ?</h3><p>Une vulnérabilité est une faiblesse dans un logiciel, un système, un équipement ou sa configuration, susceptible d'être exploitée pour porter atteinte à la confidentialité, à l'intégrité ou à la disponibilité.</p><p>Une CVE est un identifiant public attribué à une vulnérabilité référencée. Le score CVSS aide à caractériser sa gravité technique, mais ne suffit pas à déterminer seul le risque réel : l'exposition du système, les mesures de protection et l'existence d'une exploitation active comptent aussi.</p></article>
+<article class="card"><h3>Qu'est-ce qu'une zero-day ?</h3><p>Le terme <em>zero-day</em> désigne généralement une vulnérabilité exploitée alors que le fournisseur n'a pas encore mis à disposition de correctif, ou une faille dont le défenseur n'a pas eu le temps de se protéger. Les usages exacts du terme peuvent varier selon le contexte.</p><p>Toutes les failles critiques ne sont pas des zero-days, et une vulnérabilité connue depuis longtemps peut rester dangereuse si les systèmes ne sont pas corrigés.</p></article>
+<article class="card"><h3>Pourquoi certaines failles sont-elles plus urgentes ?</h3><ul><li>Une exploitation active est observée dans des attaques réelles.</li><li>La faille est exploitable à distance ou sans authentification.</li><li>Elle permet des conséquences importantes : exécution de code, élévation de privilèges, fuite de données ou déni de service.</li><li>Le produit vulnérable est largement déployé ou directement exposé à Internet.</li><li>Aucun correctif n'est disponible, ou son déploiement est difficile.</li></ul><p>La gravité publiée ne remplace donc pas une analyse du contexte d'utilisation.</p></article>
+<article class="card"><h3>Ce que je cherche à comprendre</h3><ul><li>Quel composant est vulnérable et pourquoi ?</li><li>Quelles versions ou configurations sont concernées ?</li><li>Existe-t-il une preuve d'exploitation dans la nature, ou seulement une preuve de concept ?</li><li>Quelles sont les conséquences possibles et les conditions nécessaires ?</li><li>Quel correctif ou contournement est recommandé ?</li><li>Qu'est-ce que cette faille apprend sur la sécurité du produit ou la détection des attaques ?</li></ul></article>
+</div></div></section>
+<section class="sec" id="cycle"><div class="wrap prose">
+<h2>Le cycle de vie d'une vulnérabilité</h2>
+<ol class="timeline">
+<li><p class="meta">1 - Découverte</p><h3>Identification de la faiblesse</h3><p>La faille peut être découverte par un chercheur, un éditeur, un utilisateur ou un attaquant. La découverte ne signifie pas forcément qu'elle est déjà exploitée.</p></li>
+<li><p class="meta">2 - Divulgation et analyse</p><h3>Comprendre la portée</h3><p>Les chercheurs et l'éditeur déterminent les produits affectés, les conditions d'exploitation et les conséquences. Une attribution de CVE peut faciliter le suivi.</p></li>
+<li><p class="meta">3 - Exploitation éventuelle</p><h3>Évaluer le risque réel</h3><p>Il faut distinguer une faille théorique, une preuve de concept publique et une exploitation confirmée dans des attaques. Ces situations ne présentent pas le même niveau de risque.</p></li>
+<li><p class="meta">4 - Correctif et mesures temporaires</p><h3>Réduire l'exposition</h3><p>L'éditeur peut publier une mise à jour ou recommander un contournement. Il faut vérifier les versions corrigées, appliquer les mesures adaptées et contrôler que le déploiement a réussi.</p></li>
+<li><p class="meta">5 - Retour d'expérience</p><h3>Comprendre ce qui a changé</h3><p>Une analyse utile compare les informations initiales aux découvertes ultérieures : nouvelles conditions d'exploitation, extension des produits touchés, détection d'attaques ou changement de recommandation.</p></li>
+</ol>
+</div></section>
+<section class="sec alt" id="analyses"><div class="wrap">
+<h2>Analyses de vulnérabilités</h2>
+<p class="prose">Cette section accueillera les études de cas sélectionnées. Une fiche sera publiée lorsqu'il y aura assez d'informations vérifiables pour apporter une réelle explication technique, et pas seulement répéter le titre d'un avis de sécurité.</p>
+<article class="card"><h3>Modèle d'analyse à utiliser</h3><dl class="facts"><dt>Identifiant</dt><dd>CVE, si attribué</dd><dt>Produit et versions affectés</dt><dd>À vérifier dans l'avis de l'éditeur</dd><dt>Type de faiblesse</dt><dd>À établir à partir de la documentation technique</dd><dt>Gravité et contexte</dt><dd>Score publié et évaluation du risque selon l'exposition</dd><dt>Exploitation</dt><dd>Distinguer preuve de concept, exploitation signalée et exploitation confirmée</dd><dt>Conséquences</dt><dd>Exécution de code, fuite de données, déni de service ou autre effet documenté</dd><dt>Correctif</dt><dd>Versions corrigées et mesures temporaires officielles</dd><dt>Analyse personnelle</dt><dd>Ce que cette faille permet de comprendre et les leçons à retenir</dd><dt>Sources</dt><dd>Liens directs, dates de publication et éventuelles mises à jour</dd></dl></article>
+<p class="empty">Aucune étude de cas n'a encore été publiée.</p>
+</div></section>
+<section class="sec" id="historique"><div class="wrap">
+<h2>Historique des mises à jour</h2>
+<p class="prose">Les nouvelles entrées seront ajoutées ici de la plus récente à la plus ancienne. Chaque entrée indiquera la date de publication de la source et ce qu'elle apporte par rapport aux informations précédentes.</p>
+<article class="card"><p class="meta">03 octobre 2026 - Création de la veille</p><h3>Définition du périmètre</h3><p>Choix d'une veille centrée sur la découverte, l'exploitation et la correction des vulnérabilités, avec un intérêt particulier pour les zero-days. Cette entrée fixe le périmètre (elle ne constitue pas une actualité de vulnérabilité).</p></article>
+</div></section>
+<section class="sec alt" id="sources"><div class="wrap">
+<h2>Méthode et sources</h2>
+<p class="prose">Les avis officiels et la documentation technique priment sur les reprises d'actualité. Pour chaque étude, je vérifierai les versions touchées, la disponibilité du correctif et le statut d'exploitation. Si une information n'est pas confirmée, je le préciserai.</p>
+<ul class="srclist">
+<li><a class="link" href="https://www.cert.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer">CERT-FR / ANSSI</a> : alertes, avis de sécurité et mesures recommandées.</li>
+<li><a class="link" href="https://nvd.nist.gov/vuln/search" target="_blank" rel="noopener noreferrer">NVD (National Vulnerability Database)</a> : recherche de CVE, descriptions et scores de gravité.</li>
+<li><a class="link" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA Known Exploited Vulnerabilities Catalog</a> : vulnérabilités dont l'exploitation est connue de CISA.</li>
+<li><a class="link" href="https://www.cve.org/" target="_blank" rel="noopener noreferrer">CVE Program</a> : identifiants et informations de référence sur les vulnérabilités.</li>
+<li><a class="link" href="https://msrc.microsoft.com/update-guide" target="_blank" rel="noopener noreferrer">Microsoft Security Response Center</a> : avis et correctifs de sécurité Microsoft.</li>
+<li><a class="link" href="https://www.zerodayinitiative.com/advisories/published/" target="_blank" rel="noopener noreferrer">Zero Day Initiative - avis publiés</a> : recherches et avis de vulnérabilités.</li>
+</ul>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap foot"><p>© <span data-year>2026</span> Jérémy Bruguet</p><ul><li><a href="index.html">Accueil</a></li><li><a href="veille.html">Veille technologique</a></li><li><a href="projets.html">Projets</a></li><li><a href="CV_jeremy_bruguet.pdf" target="_blank" rel="noopener">CV</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul></div></footer>
+</body>
+</html>

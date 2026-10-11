@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<base id="site-base" href="/">
+<script>
+(function () {
+  var PROJECT_REPO = 'portfolio';
+  var base = document.getElementById('site-base');
+  var host = window.location.hostname;
+  var path = window.location.pathname;
+  if (window.location.protocol === 'file:') {
+    base.href = './';
+  } else if (host === 'localhost' || host === '127.0.0.1') {
+    base.href = '/';
+  } else if (host.endsWith('.github.io') && PROJECT_REPO && PROJECT_REPO !== 'VOTRE-DEPOT') {
+    base.href = '/' + PROJECT_REPO.replace(/^\/+|\/+$/g, '') + '/';
+  } else {
+    base.href = '/';
+  }
+})();
+</script>
+<title>Page introuvable (404) - Jérémy Bruguet</title>
+<meta name="description" content="La page demandée est introuvable. Retour à l’accueil du portfolio de Jérémy Bruguet.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Page introuvable (404) - Jérémy Bruguet">
+<meta property="og:description" content="La page demandée est introuvable. Retour à l’accueil du portfolio de Jérémy Bruguet.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html"><span class="logo" aria-hidden="true">JB</span>Jérémy Bruguet</a>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="menu"><span class="i icon icon-menu" aria-hidden="true"></span> Menu</button>
+<nav id="menu" aria-label="Navigation principale"><ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="projets.html">Projets</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li><a href="CV_jeremy_bruguet.pdf" target="_blank" rel="noopener">CV</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul></nav>
+</div></header>
+<main id="contenu">
+<section class="hero"><div class="wrap err-grid">
+<div>
+<p class="eyebrow">Erreur 404</p>
+<h1><span class="code">404</span><span class="sr"> : </span>Page introuvable</h1>
+<p class="lead">La page que vous cherchez n’existe pas ou a été déplacée. Flammy a fouillé partout sans la trouver.</p>
+<p class="small" hidden>Adresse demandée : <code data-path></code></p>
+<p class="actions">
+<a class="btn primary" href="index.html"><span class="i icon icon-home" aria-hidden="true"></span> Retour à l’accueil</a>
+<button class="btn" type="button" data-back hidden><span class="i icon icon-back" aria-hidden="true"></span> Page précédente</button>
+</p>
+<p class="small">Vous pouvez aussi consulter ma <a class="link" href="veille.html">veille technologique</a>.</p>
+</div>
+<figure class="flammy"><img src="assets/flammy.jpg" alt="Flammy, la mascotte : un petit personnage blanc au sourire timide, aux longs rubans bleus et orange" width="960" height="960"><figcaption>Flammy a cherché partout. Rien.</figcaption></figure>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap foot">
+<p>© <span data-year>2026</span> Jérémy Bruguet</p>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="veille.html">Veille technologique</a></li>
+<li><a href="projets.html">Projets</a></li>
+<li><a href="CV_jeremy_bruguet.pdf" target="_blank" rel="noopener">CV</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+</ul>
+</div></footer>
+</body>
+</html>
