@@ -25,7 +25,7 @@
     .then((data) => {
       list.replaceChildren();
       const items = Array.isArray(data.items) ? data.items : [];
-      items.slice(0, 20).forEach((item) => {
+      items.slice(0, 1).forEach((item) => {
         const article = element("article", "card");
         article.append(element("p", "meta", (item.source || "Source") + " · " + formatDate(item.date)));
         article.append(element("h3", "", item.title || "Publication de sécurité"));
@@ -43,7 +43,7 @@
         list.append(article);
       });
       if (!items.length) throw new Error("Le flux ne contient aucune entrée");
-      status.textContent = items.length + " entrées récupérées automatiquement depuis les sources officielles.";
+      status.textContent = "Une seule actualité récente est affichée, à partir du CERT-FR / ANSSI. La date correspond à la publication de la source.";
       if (updated && data.generatedAt) updated.textContent = "Dernière génération : " + formatDate(data.generatedAt);
       if (data.warnings && data.warnings.length) status.textContent += " Une source est temporairement indisponible ; les données disponibles sont conservées.";
     })
