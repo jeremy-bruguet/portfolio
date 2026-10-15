@@ -1,0 +1,11 @@
+{
+  "generatedAt": null,
+  "sources": [
+    "CERT-FR / ANSSI",
+    "CISA Known Exploited Vulnerabilities Catalog"
+  ],
+  "items": [],
+  "warnings": [
+    "Le flux sera rempli lors de la première exécution du workflow GitHub Actions."
+  ]
+}
