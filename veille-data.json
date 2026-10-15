@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T00:00:00Z",
+  "generatedAt": "2026-10-15T17:55:00Z",
   "sources": [
     "CERT-FR / ANSSI"
   ],
@@ -10,7 +10,8 @@
       "date": "2026-10-14",
       "source": "CERT-FR / ANSSI",
       "summary": "Publiée le 14 octobre 2026, cette alerte concerne une vulnérabilité dans la passerelle VPN Ivanti Connect Secure. Ivanti indique qu’elle est exploitée activement. Le CERT-FR signale des risques d’exécution de code à distance, d’élévation de privilèges et de contournement de la politique de sécurité. Vérifie les versions concernées et applique les recommandations de l’éditeur.",
-      "kind": "Dernière alerte officielle disponible (publication du 14 octobre 2026)"
+      "kind": "Dernière alerte officielle disponible (publication du 14 octobre 2026)",
+      "cve": "CVE-2026-104935"
     }
   ],
   "warnings": []
