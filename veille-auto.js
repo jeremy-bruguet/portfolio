@@ -30,6 +30,8 @@
         article.append(element("p", "meta", (item.source || "Source") + " · " + formatDate(item.date)));
         article.append(element("h3", "", item.title || "Publication de sécurité"));
         if (item.kind) article.append(element("p", "small", item.kind));
+        if (item.cve) article.append(element("p", "small", "Identifiant CVE : " + item.cve));
+        if (item.cvss) article.append(element("p", "small", "Score CVSS : " + item.cvss));
         if (item.summary) article.append(element("p", "", item.summary));
         if (item.action) article.append(element("p", "", "Action recommandée : " + item.action));
         if (item.dueDate) article.append(element("p", "small", "Échéance indiquée par CISA : " + item.dueDate));
