@@ -1,10 +1,20 @@
 {
-  "generatedAt": "2026-10-15T16:30:23.725562+00:00",
+  "generatedAt": "2026-10-15T00:00:00Z",
   "sources": [
     "CERT-FR / ANSSI",
     "CISA Known Exploited Vulnerabilities Catalog"
   ],
   "items": [
+    {
+      "title": "Vulnérabilité exploitée dans Ivanti Connect Secure — CVE-2026-104935",
+      "url": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
+      "date": "2026-10-14",
+      "source": "CERT-FR / ANSSI",
+      "summary": "Faille de contournement d’authentification pouvant permettre l’exécution de commandes à distance. Ivanti indique que la vulnérabilité est activement exploitée. Vérifier les versions affectées et suivre les mesures officielles.",
+      "kind": "Alerte en cours — vulnérabilité exploitée",
+      "cve": "CVE-2026-104935",
+      "action": "Consulter l’alerte CERT-FR et appliquer les correctifs ou mesures d’isolement adaptés."
+    },
     {
       "title": "CVE-2026-105134 — Ahsay AhsayCBS",
       "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search=CVE-2026-105134",
@@ -88,17 +98,6 @@
       "source": "CERT-FR / ANSSI",
       "summary": "De multiples vulnérabilités ont été découvertes dans les produits Siemens. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
       "kind": "Avis et alertes de sécurité"
-    },
-    {
-      "title": "CVE-2026-104935 — Ivanti Connect Secure",
-      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search=CVE-2026-104935",
-      "date": "2026-10-13",
-      "source": "CISA — Known Exploited Vulnerabilities",
-      "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
-      "kind": "Exploitation connue signalée par CISA",
-      "cve": "CVE-2026-104935",
-      "action": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
-      "dueDate": "2026-10-16"
     },
     {
       "title": "CVE-2026-96951 — Microsoft Windows",
