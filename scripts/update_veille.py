@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Publie une seule actualité récente du CERT-FR, sans doublons."""
 import json
+import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -10,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 FEED_URL = "https://www.cert.ssi.gouv.fr/feed/"
 HEADERS = {"User-Agent": "PortfolioVeille/1.0 (veille pédagogique)"}
+CVE_PATTERN = re.compile(r"\bCVE-\d{4}-\d{4,}\b", re.IGNORECASE)
 
 
 def fetch(url):
@@ -40,27 +42,17 @@ def main():
         if not title or not link or link in seen:
             continue
         seen.add(link)
-        candidates.append({
-            "title": title,
-            "url": link,
-            "date": date_iso(node.findtext("pubDate")),
-            "source": "CERT-FR / ANSSI",
-            "summary": " ".join((node.findtext("description") or "").split())[:700],
-            "kind": "Dernière publication officielle du CERT-FR"
-        })
+        summary = " ".join((node.findtext("description") or "").split())[:700]
+        item = {"title": title, "url": link, "date": date_iso(node.findtext("pubDate")), "source": "CERT-FR / ANSSI", "summary": summary, "kind": "Dernière publication officielle du CERT-FR"}
+        cves = CVE_PATTERN.findall(title + " " + summary)
+        if cves:
+            item["cve"] = cves[0].upper()
+        candidates.append(item)
     candidates.sort(key=lambda item: item.get("date", ""), reverse=True)
     if not candidates:
         raise SystemExit("Le flux CERT-FR ne contient aucune publication exploitable.")
-    output = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "sources": ["CERT-FR / ANSSI"],
-        "items": candidates[:1],
-        "warnings": []
-    }
-    (ROOT / "veille-data.json").write_text(
-        json.dumps(output, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8"
-    )
+    output = {"generatedAt": datetime.now(timezone.utc).isoformat(), "sources": ["CERT-FR / ANSSI"], "items": candidates[:1], "warnings": []}
+    (ROOT / "veille-data.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Une seule actualité récente publiée dans veille-data.json : " + candidates[0]["title"])
 
 
