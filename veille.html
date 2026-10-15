@@ -65,8 +65,22 @@
 <section class="sec alt" id="analyses"><div class="wrap">
 <h2>Analyses de vulnérabilités</h2>
 <p class="prose">Cette section accueillera les études de cas sélectionnées. Une fiche sera publiée lorsqu'il y aura assez d'informations vérifiables pour apporter une réelle explication technique, et pas seulement répéter le titre d'un avis de sécurité.</p>
+<article class="card">
+<p class="meta">14 octobre 2026 · CERT-FR · Alerte en cours</p>
+<h3>Ivanti Connect Secure : une faille exploitée activement</h3>
+<p><strong>Identifiant :</strong> CVE-2026-104935 · <strong>CVSS :</strong> 8,6/10 (élevé).</p>
+<p><strong>Le problème :</strong> cette vulnérabilité de contournement d’authentification touche la passerelle VPN Ivanti Connect Secure. D’après le CERT-FR et l’éditeur, elle est activement exploitée. Un attaquant distant non authentifié peut exécuter des commandes ; l’alerte mentionne également des risques d’élévation de privilèges et de contournement des protections.</p>
+<p><strong>Versions concernées :</strong> certaines versions 22.8Rx antérieures à 22.8R2.5, 25.1.1.x antérieures à 25.1.1.2 et 25.1.3.x antérieures à 25.1.3.1. Il faut vérifier la branche exacte et les préconisations de l’éditeur avant toute intervention.</p>
+<p><strong>Pourquoi c’est important :</strong> une passerelle VPN est exposée à distance et donne accès au réseau d’une organisation. Si elle est compromise, l’attaquant peut chercher à rebondir vers d’autres systèmes ; les secrets stockés sur l’équipement peuvent aussi devoir être considérés comme compromis.</p>
+<p><strong>Mesures recommandées :</strong> suivre l’alerte CERT-FR et les instructions Ivanti. Si une compromission est suspectée, isoler l’équipement, préserver les journaux et les éléments utiles à l’investigation, puis appliquer la procédure de réponse à incident. Installer la version corrigée appropriée ; si aucun correctif adapté n’est disponible, réduire l’exposition et contacter le support Ivanti.</p>
+<p><strong>Mon analyse :</strong> cette actualité montre qu’un VPN ne doit pas être considéré comme sûr uniquement parce qu’il sert à protéger les accès distants. Il faut surveiller les avis de sécurité des équipements exposés, appliquer rapidement les correctifs et prévoir une procédure d’investigation en cas de compromission.</p>
+<p class="small">Les versions et consignes peuvent évoluer : consulte les sources officielles avant d’agir.</p>
+<p><a class="link" href="https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/" target="_blank" rel="noopener noreferrer">Lire l’alerte complète du CERT-FR</a></p>
+<p><a class="link" href="https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935?language=en_US" target="_blank" rel="noopener noreferrer">Consulter l’avis de sécurité Ivanti</a></p>
+<p><a class="link" href="https://www.cve.org/CVERecord?id=CVE-2026-104935" target="_blank" rel="noopener noreferrer">Consulter la fiche CVE</a></p>
+</article>
 <article class="card"><h3>Modèle d'analyse à utiliser</h3><dl class="facts"><dt>Identifiant</dt><dd>CVE, si attribué</dd><dt>Produit et versions affectés</dt><dd>À vérifier dans l'avis de l'éditeur</dd><dt>Type de faiblesse</dt><dd>À établir à partir de la documentation technique</dd><dt>Gravité et contexte</dt><dd>Score publié et évaluation du risque selon l'exposition</dd><dt>Exploitation</dt><dd>Distinguer preuve de concept, exploitation signalée et exploitation confirmée</dd><dt>Conséquences</dt><dd>Exécution de code, fuite de données, déni de service ou autre effet documenté</dd><dt>Correctif</dt><dd>Versions corrigées et mesures temporaires officielles</dd><dt>Analyse personnelle</dt><dd>Ce que cette faille permet de comprendre et les leçons à retenir</dd><dt>Sources</dt><dd>Liens directs, dates de publication et éventuelles mises à jour</dd></dl></article>
-<p class="empty">Aucune étude de cas n'a encore été publiée.</p>
+
 </div></section>
 <section class="sec" id="historique"><div class="wrap">
 <h2>Historique des mises à jour</h2>
