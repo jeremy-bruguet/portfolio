@@ -12,6 +12,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+<script src="veille-auto.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -32,7 +33,7 @@
 <h1>Vulnérabilités informatiques : de la découverte à la correction</h1>
 <p class="lead">Cette veille suit les failles de sécurité informatiques, en accordant une attention particulière aux vulnérabilités zero-day, à leur exploitation réelle et aux réponses apportées par les éditeurs.</p>
 <p>L'objectif n'est pas de recopier une liste de CVE : chaque mise à jour doit expliquer ce qui est vulnérable, ce qu'un attaquant pourrait faire, si l'exploitation est confirmée, quelles versions sont concernées et comment réduire le risque.</p>
-<ul class="tags"><li><a href="#etat-des-lieux">État des lieux</a></li><li><a href="#cycle">Cycle de vie d'une faille</a></li><li><a href="#analyses">Analyses de vulnérabilités</a></li><li><a href="#historique">Historique</a></li><li><a href="#sources">Sources</a></li></ul>
+<ul class="tags"><li><a href="#etat-des-lieux">État des lieux</a></li><li><a href="#cycle">Cycle de vie d'une faille</a></li><li><a href="#flux-auto">Flux automatique</a></li><li><a href="#analyses">Analyses de vulnérabilités</a></li><li><a href="#historique">Historique</a></li><li><a href="#sources">Sources</a></li></ul>
 </div></section>
 <section class="sec alt" id="etat-des-lieux"><div class="wrap">
 <h2>État des lieux initial</h2>
@@ -52,6 +53,14 @@
 <li><p class="meta">4 - Correctif et mesures temporaires</p><h3>Réduire l'exposition</h3><p>L'éditeur peut publier une mise à jour ou recommander un contournement. Il faut vérifier les versions corrigées, appliquer les mesures adaptées et contrôler que le déploiement a réussi.</p></li>
 <li><p class="meta">5 - Retour d'expérience</p><h3>Comprendre ce qui a changé</h3><p>Une analyse utile compare les informations initiales aux découvertes ultérieures : nouvelles conditions d'exploitation, extension des produits touchés, détection d'attaques ou changement de recommandation.</p></li>
 </ol>
+</div></section>
+<section class="sec alt" id="flux-auto"><div class="wrap">
+<h2>Actualités de sécurité mises à jour automatiquement</h2>
+<p class="prose">Cette liste est générée quotidiennement à partir des publications du CERT-FR / ANSSI et du catalogue CISA des vulnérabilités exploitées. Les entrées sont des alertes à examiner : consulte les sources originales avant de tirer une conclusion ou d'appliquer une mesure.</p>
+<p class="meta" id="veille-auto-date">Chargement de la date de mise à jour…</p>
+<p id="veille-auto-status" role="status" aria-live="polite">Chargement des dernières publications…</p>
+<div class="stack" id="veille-auto-list"><p class="empty">Les publications apparaîtront ici lorsque le flux sera chargé.</p></div>
+<noscript><p class="empty">JavaScript est nécessaire pour afficher les publications automatiques.</p></noscript>
 </div></section>
 <section class="sec alt" id="analyses"><div class="wrap">
 <h2>Analyses de vulnérabilités</h2>
