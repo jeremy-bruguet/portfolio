@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Construit veille-data.json à partir de flux publics de sécurité."""
+"""Publie une seule actualité récente du CERT-FR, sans doublons."""
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -8,6 +8,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+FEED_URL = "https://www.cert.ssi.gouv.fr/feed/"
 HEADERS = {"User-Agent": "PortfolioVeille/1.0 (veille pédagogique)"}
 
 
@@ -29,72 +30,38 @@ def date_iso(value):
         return value
 
 
-def cert_fr_items():
-    url = "https://www.cert.ssi.gouv.fr/feed/"
-    root = ET.fromstring(fetch(url))
-    items = []
-    for node in root.findall(".//item")[:12]:
-        title = (node.findtext("title") or "Publication CERT-FR").strip()
-        link = (node.findtext("link") or "https://www.cert.ssi.gouv.fr/").strip()
-        description = " ".join((node.findtext("description") or "").split())
-        pub_date = date_iso(node.findtext("pubDate"))
-        items.append({
-            "title": title, "url": link, "date": pub_date,
-            "source": "CERT-FR / ANSSI",
-            "summary": description[:450],
-            "kind": "Avis et alertes de sécurité"
-        })
-    return items
-
-
-def cisa_items():
-    url = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
-    data = json.loads(fetch(url))
-    vulnerabilities = data.get("vulnerabilities", [])
-    vulnerabilities.sort(key=lambda x: x.get("dateAdded", ""), reverse=True)
-    items = []
-    for vuln in vulnerabilities[:15]:
-        cve = vuln.get("cveID", "CVE non précisée")
-        product = vuln.get("product", "Produit non précisé")
-        vendor = vuln.get("vendorProject", "")
-        items.append({
-            "title": f"{cve} — {vendor} {product}".strip(),
-            "url": f"https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search={cve}",
-            "date": vuln.get("dateAdded", ""),
-            "source": "CISA — Known Exploited Vulnerabilities",
-            "summary": vuln.get("shortDescription", ""),
-            "kind": "Exploitation connue signalée par CISA",
-            "cve": cve,
-            "action": vuln.get("requiredAction", ""),
-            "dueDate": vuln.get("dueDate", "")
-        })
-    return items
-
-
 def main():
-    items = []
-    errors = []
-    for name, loader in (("CERT-FR", cert_fr_items), ("CISA KEV", cisa_items)):
-        try:
-            items.extend(loader())
-        except Exception as exc:
-            errors.append(f"{name}: {type(exc).__name__}: {exc}")
-    if not items:
-        raise SystemExit("Aucune source n'a pu être récupérée : " + "; ".join(errors))
-    items.sort(key=lambda item: item.get("date", ""), reverse=True)
+    root = ET.fromstring(fetch(FEED_URL))
+    candidates = []
+    seen = set()
+    for node in root.findall(".//item"):
+        title = " ".join((node.findtext("title") or "").split())
+        link = (node.findtext("link") or "").strip()
+        if not title or not link or link in seen:
+            continue
+        seen.add(link)
+        candidates.append({
+            "title": title,
+            "url": link,
+            "date": date_iso(node.findtext("pubDate")),
+            "source": "CERT-FR / ANSSI",
+            "summary": " ".join((node.findtext("description") or "").split())[:700],
+            "kind": "Dernière publication officielle du CERT-FR"
+        })
+    candidates.sort(key=lambda item: item.get("date", ""), reverse=True)
+    if not candidates:
+        raise SystemExit("Le flux CERT-FR ne contient aucune publication exploitable.")
     output = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "sources": ["CERT-FR / ANSSI", "CISA Known Exploited Vulnerabilities Catalog"],
-        "items": items,
-        "warnings": errors
+        "sources": ["CERT-FR / ANSSI"],
+        "items": candidates[:1],
+        "warnings": []
     }
     (ROOT / "veille-data.json").write_text(
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8"
     )
-    print(f"{len(items)} entrées écrites dans veille-data.json")
-    if errors:
-        print("Certaines sources n'ont pas répondu : " + "; ".join(errors))
+    print("Une seule actualité récente publiée dans veille-data.json : " + candidates[0]["title"])
 
 
 if __name__ == "__main__":
