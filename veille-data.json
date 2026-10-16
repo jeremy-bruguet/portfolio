@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-10-15T17:55:00Z",
+  "generatedAt": "2026-10-16T06:55:05.974068+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Vulnérabilité dans Ivanti Connect Secure (ICS)",
-      "url": "https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-013/",
-      "date": "2026-10-14",
+      "title": "Multiples vulnérabilités dans les produits F5 (15 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/",
+      "date": "2026-10-15T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "Publiée le 14 octobre 2026, cette alerte concerne une vulnérabilité dans la passerelle VPN Ivanti Connect Secure. Ivanti indique qu’elle est exploitée activement. Le CERT-FR signale des risques d’exécution de code à distance, d’élévation de privilèges et de contournement de la politique de sécurité. Vérifie les versions concernées et applique les recommandations de l’éditeur.",
-      "kind": "Dernière alerte officielle disponible (publication du 14 octobre 2026)",
-      "cve": "CVE-2026-104935"
+      "summary": "De multiples vulnérabilités ont été découvertes dans les produits F5. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
   "warnings": []
