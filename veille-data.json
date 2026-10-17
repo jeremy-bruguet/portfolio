@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-16T06:55:05.974068+00:00",
+  "generatedAt": "2026-10-17T06:50:33.367412+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans les produits F5 (15 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/",
-      "date": "2026-10-15T00:00:00+00:00",
+      "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (16 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1334/",
+      "date": "2026-10-16T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans les produits F5. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+      "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
