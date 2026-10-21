@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-20T06:53:45.986054+00:00",
+  "generatedAt": "2026-10-21T06:55:38.999445+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Bulletin d'actualité CERTFR-2026-ACT-044 (19 octobre 2026)",
-      "url": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-044/",
-      "date": "2026-10-19T00:00:00+00:00",
+      "title": "Violations de données applicatives - Retour d’expérience du CERT-FR (20 octobre 2026)",
+      "url": "https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-008/",
+      "date": "2026-10-20T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
+      "summary": "En 2025, le CERT-FR a suivi près de 200 violations de données issues d’applications web. Dans de nombreux cas, ces exfiltrations ont été permises par des actions attaquantes d’un faible niveau de complexité, sans exploitation de vulnérabilité technique. Les divulgations de données ont des impacts...",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
