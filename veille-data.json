@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-28T07:07:08.840079+00:00",
+  "generatedAt": "2026-10-29T07:07:39.240062+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans Microsoft Edge (27 octobre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1395/",
-      "date": "2026-10-27T00:00:00+00:00",
+      "title": "Multiples vulnérabilités dans Metabase (28 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1403/",
+      "date": "2026-10-28T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+      "summary": "De multiples vulnérabilités ont été découvertes dans Metabase. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
