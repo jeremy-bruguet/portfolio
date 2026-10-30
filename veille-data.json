@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-10-29T07:07:39.240062+00:00",
+  "generatedAt": "2026-10-30T07:08:10.174523+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans Metabase (28 octobre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1403/",
-      "date": "2026-10-28T00:00:00+00:00",
+      "title": "Vulnérabilité dans les produits Cisco (29 octobre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1412/",
+      "date": "2026-10-29T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans Metabase. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-      "kind": "Dernière publication officielle du CERT-FR"
+      "summary": "Une vulnérabilité a été découverte dans les produits Cisco. Elle permet à un attaquant de provoquer un déni de service à distance. Cisco indique que la vulnérabilité CVE-2026-76418 est activement exploitée.",
+      "kind": "Dernière publication officielle du CERT-FR",
+      "cve": "CVE-2026-76418"
     }
   ],
   "warnings": []
