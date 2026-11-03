@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-02T07:37:30.392042+00:00",
+  "generatedAt": "2026-11-03T07:22:23.775183+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans les produits IBM (30 octobre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1433/",
-      "date": "2026-10-30T00:00:00+00:00",
+      "title": "Bulletin d'actualité CERTFR-2026-ACT-046 (02 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-046/",
+      "date": "2026-11-02T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser l'application des...",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
