@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-06T07:26:53.989166+00:00",
+  "generatedAt": "2026-11-07T07:10:10.049122+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans Microsoft Edge (05 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1466/",
-      "date": "2026-11-05T00:00:00+00:00",
+      "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (06 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1470/",
+      "date": "2026-11-06T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un problème de sécurité non spécifié par l'éditeur.",
+      "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
