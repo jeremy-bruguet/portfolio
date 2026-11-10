@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-09T07:37:55.983369+00:00",
+  "generatedAt": "2026-11-10T07:21:48.442702+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (06 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1470/",
-      "date": "2026-11-06T00:00:00+00:00",
+      "title": "Activités cyber offensives ciblant la France menées par des acteurs iraniens liés au CGRI (09 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-009/",
+      "date": "2026-11-09T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+      "summary": "Les membres du **Centre de Coordination des Crises Cyber (C4)** \\* ont observé plusieurs attaques à but de déstabilisation menées à l’encontre des intérêts français, qu’ils sont en mesure d’imputer **aux unités cyber-offensives Shahid Shoostari et Shahid Kaveh, opérant au sein du Centre...",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
