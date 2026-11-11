@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-10T07:21:48.442702+00:00",
+  "generatedAt": "2026-11-11T14:23:11.993820+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Activités cyber offensives ciblant la France menées par des acteurs iraniens liés au CGRI (09 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/cti/CERTFR-2026-CTI-009/",
-      "date": "2026-11-09T00:00:00+00:00",
+      "title": "Multiples vulnérabilités dans les produits SAP (10 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1497/",
+      "date": "2026-11-10T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "Les membres du **Centre de Coordination des Crises Cyber (C4)** \\* ont observé plusieurs attaques à but de déstabilisation menées à l’encontre des intérêts français, qu’ils sont en mesure d’imputer **aux unités cyber-offensives Shahid Shoostari et Shahid Kaveh, opérant au sein du Centre...",
+      "summary": "De multiples vulnérabilités ont été découvertes dans les produits SAP. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
