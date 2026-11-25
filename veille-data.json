@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-24T17:45:07.011248+00:00",
+  "generatedAt": "2026-11-25T17:13:53.076076+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Multiples vulnérabilités dans Postfix (24 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1610/",
-      "date": "2026-11-24T00:00:00+00:00",
+      "title": "Recommandations de sécurisation des liaisons inter-sites (25 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/dur/CERTFR-2026-DUR-001/",
+      "date": "2026-11-25T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "De multiples vulnérabilités ont été découvertes dans Postfix. Elles permettent à un attaquant de provoquer un déni de service à distance et une atteinte à la confidentialité des données.",
+      "summary": "Objet : Recommandations de sécurisation des liaisons inter-sites, à destination des clients de ces offres. Annexe : Liens et références Depuis plusieurs années, l’Agence nationale de la sécurité des systèmes d'information (ANSSI) a constaté de multiples compromissions de réseaux de...",
       "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
