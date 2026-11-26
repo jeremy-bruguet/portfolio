@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-11-25T17:13:53.076076+00:00",
+  "generatedAt": "2026-11-26T16:54:12.624077+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Recommandations de sécurisation des liaisons inter-sites (25 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/dur/CERTFR-2026-DUR-001/",
-      "date": "2026-11-25T00:00:00+00:00",
+      "title": "Vulnérabilité dans Drupal (26 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1623/",
+      "date": "2026-11-26T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "Objet : Recommandations de sécurisation des liaisons inter-sites, à destination des clients de ces offres. Annexe : Liens et références Depuis plusieurs années, l’Agence nationale de la sécurité des systèmes d'information (ANSSI) a constaté de multiples compromissions de réseaux de...",
-      "kind": "Dernière publication officielle du CERT-FR"
+      "summary": "Une vulnérabilité a été découverte dans Drupal. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité. Drupal indique que la vulnérabilité CVE-2026-136716 est activement exploitée.",
+      "kind": "Dernière publication officielle du CERT-FR",
+      "cve": "CVE-2026-136716"
     }
   ],
   "warnings": []
