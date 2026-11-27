@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-11-26T16:54:12.624077+00:00",
+  "generatedAt": "2026-11-27T16:40:07.754498+00:00",
   "sources": [
     "CERT-FR / ANSSI"
   ],
   "items": [
     {
-      "title": "Vulnérabilité dans Drupal (26 novembre 2026)",
-      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1623/",
-      "date": "2026-11-26T00:00:00+00:00",
+      "title": "Multiples vulnérabilités dans Xen (27 novembre 2026)",
+      "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1631/",
+      "date": "2026-11-27T00:00:00+00:00",
       "source": "CERT-FR / ANSSI",
-      "summary": "Une vulnérabilité a été découverte dans Drupal. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité. Drupal indique que la vulnérabilité CVE-2026-136716 est activement exploitée.",
-      "kind": "Dernière publication officielle du CERT-FR",
-      "cve": "CVE-2026-136716"
+      "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+      "kind": "Dernière publication officielle du CERT-FR"
     }
   ],
   "warnings": []
